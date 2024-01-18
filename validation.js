@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addressError = document.getElementById('addressError')
 
     const validateString = (string) => {
-      const regex = new RegExp("^[A-Za-z Ññ]+$")
+      const regex = new RegExp("^[A-Za-zÑñáéíóúüÁÉÍÓÚÜ][a-zñáéíóúü]+$");
       return regex.test(string);
     }
 
