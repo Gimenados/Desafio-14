@@ -41,6 +41,15 @@ body {
     flex-direction: row;
 }
 
+.form_group_direc {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .form .form_group_dni .radio-group {
     margin: 10px 0px 10px 0px;
     display: flex;
@@ -55,7 +64,6 @@ body {
 
 form .form_group .ultimo-input {
     margin-left: 5px !important;
-    width: 94%;
 }
 
 label {
@@ -77,7 +85,7 @@ input[type="text"], input[type="textDirection"], input[type="textDocument"] {
     margin-left: 5px;
     margin-top: 5px !important;
   }
-  
+
   form .form_group label {
     font-size: 1em;
     font-family: "Sansita Swashed", cursive;
