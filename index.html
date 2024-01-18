@@ -24,11 +24,12 @@
     <div class="form_group_dni">
       <label>Tipo de documento: </label>
       <div class="radio-group">
-        <input type="radio" id="dni" name="documentType" value="DNI" required onchange="habilitarCampoDocumento()">
+        <input type="radio" id="dni" name="documentType" value="DNI">
         <label for="dni">DNI</label>
-        <input type="radio" id="cuil" name="documentType" value="CUIL" required onchange="habilitarCampoDocumento()">
+        <input type="radio" id="cuil" name="documentType" value="CUIL">
         <label for="cuil">CUIL</label>
       </div>
+      <p id="docError" class="input-msg-error"></p>
     </div>
 
     <div class="form_group">

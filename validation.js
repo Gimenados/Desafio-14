@@ -7,14 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const name = document.getElementById('name');
     const lastName = document.getElementById('lastName');
-    const tipoDocumento = document.querySelector('input[name="documentType"]:checked'); // Corregido
+    const tipoDocumento = document.querySelector('input[name="documentType"]:checked'); 
     const numeroDocumento = document.getElementById("documentNumber");
-    const address = document.getElementById('address')
+    const address = document.getElementById('address');
+    const dniInput = document.getElementById("dni");
+    const cuilInput = document.getElementById("cuil");
 
     const nameError = document.getElementById('nameError');
     const lastNameError = document.getElementById('lastNameError');
     const documentNumberError = document.getElementById('documentNumberError');
-    const addressError = document.getElementById('addressError')
+    const addressError = document.getElementById('addressError');
+    const docError = document.getElementById('docError')
 
     const validateString = (string) => {
       const regex = new RegExp("^[A-Za-zÑñáéíóúüÁÉÍÓÚÜ][a-zñáéíóúü]+$");
@@ -113,6 +116,19 @@ document.addEventListener('DOMContentLoaded', function () {
       lastNameError.style.marginLeft = "5px";
       validateForm = false;
     }
+
+
+    if ( dniInput.checked  || cuilInput.checked ) {
+      docError.innerText = ""
+      docError.style.display = "none"
+    } else {
+      docError.innerText = "Debe seleccionar un tipo de documento."
+      docError.style.display = "block"
+      docError.style.marginTop = "2px";
+      docError.style.color = "red";
+      docError.style.marginLeft = "5px";
+      validateForm = false
+     }
 
     // Validación del tipo de documento y número de documento
     if (tipoDocumento && tipoDocumento.value === "DNI") {
